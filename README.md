@@ -73,7 +73,7 @@ To apply ESLint formatting for a single file use terminal command
 #### Run ESLint for a Directory:
 
 To apply ESLint formatting for an entire directory and format all files in a given directory use command
-(replace `<fileName>` and `<product>` with your test file name and derictory):
+(replace `<product>` with your test derictory):
 
 ```bash
     npx eslint --fix Amazon/e2e/<product>/.
