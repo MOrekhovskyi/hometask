@@ -42,11 +42,23 @@ All the dependencies from package.json would be installed in node_modules folder
 Run 1 tests by path
 
 ```bash
-npx playwright test *.spec.ts 
+npx playwright test <fileName>.spec.ts 
 ```
 
 Run all tests 
 
 ```bash
 npx playwright test  - For tests only on all browsers
+```
+
+### How to use Linter
+
+* To run eslint formatting for a single file use terminal command:
+```bash
+    npx eslint --fix cypress/e2e/<product>/<fileName>.ts
+```
+
+* To run eslint for dir and format all files in a given directory use command:
+```bash
+    npx eslint --fix cypress/e2e/<product>/.
 ```
