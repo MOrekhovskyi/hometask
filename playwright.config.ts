@@ -1,4 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
+import { config as dotenvConfig } from 'dotenv';
+import { resolve } from 'path';
+
+dotenvConfig({ path: resolve(__dirname, '.env'), override: true });
 
 export default defineConfig({
   testDir: './Amazon',
@@ -11,7 +15,8 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [['html'], ['allure-playwright']],
+  globalTeardown: require.resolve('./utils/config/global-teardown'),
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -24,11 +29,11 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'firefox',
-      use: {
-          ...devices['Desktop Firefox'],
-           headless: false
-      },
+        name: 'chromium',
+        use: {
+            ...devices['Desktop Chrome'],
+            headless: false
+        },
     },
   ],
 });

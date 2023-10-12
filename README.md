@@ -38,6 +38,15 @@ npm install
 npx playwright install
 ```
 
+4. Allure Installation:
+
+   To incorporate Allure reporting into your project, install the Allure command-line tool:
+
+   
+```bash
+   npm install allure-playwright
+```   
+
 This will install all the required dependencies in the node_modules folder.
 
 ## How to Write Tests
@@ -93,5 +102,20 @@ To maintain code quality and formatting, we recommend using ESLint. Here's how t
 ```bash
     npx eslint --fix Amazon/e2e/<product>/.
 ```
+
+## How to Run Tests and Generate Allure Reports
+
+You can execute your tests and generate Allure reports using Playwright with the following commands:
+
+- Run Tests with Allure Reporting:
+
+   To run tests and generate Allure reports, use the following command (replace <fileName> with your test file name):
+
+   
+```bash
+   npx playwright test --workers 1 <fileName>.spec.js && npx allure generate --clean && npx allure open
+```  
+
+   This command runs your tests, generates Allure reports, and opens the report in your default browser.
 
 These instructions should help you get started with automated testing for your Amazon-related project using Playwright. If you encounter any issues or have questions, please refer to the documentation or reach out to me for support.
