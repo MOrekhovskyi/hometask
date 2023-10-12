@@ -21,7 +21,7 @@ To set up the project and its dependencies, follow these steps:
    - Clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/MOrekhovskyi/hometask
+git clone https://github.com/MOrekhovskyi/hometask.git
 ```
  Alternatively, you can download the repository as a zip folder and extract it on your local machine.
 
@@ -35,7 +35,8 @@ git clone https://github.com/MOrekhovskyi/hometask
 
 ```bash
 npm install
-npx playwright install
+npm install @playwright/test -D
+npx playwright install 
 ```
 
 4. Allure Installation:
