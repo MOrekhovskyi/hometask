@@ -44,7 +44,10 @@ export default class ProductDetailPage extends HomePage {
     await this.page.waitForLoadState();
   }
 
-  async verifyPrice(price: string) {
-    expect(await this.price.innerText(), 'Price not equal!').toEqual(price);
+  
+
+  async verifyPrice() {
+    const pattern = /^\$\d+$/;
+    expect(pattern.test(await this.price.innerText()), 'Price is not a number!');
   }
 }

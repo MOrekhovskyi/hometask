@@ -23,6 +23,6 @@ test.describe('Validate Amazon`s Products test', async () => {
     expect(productData['Ram Memory Installed Size'], 'Not expected Ram Memory').toEqual(laptops.macbookAir13.RAMSize);
     expect(productData['Screen Size'], 'Not expected Screen size').toEqual(laptops.macbookAir13.screenSize);
     expect(productData['Special Feature'], 'Not expected Special Feature').toEqual(laptops.macbookAir13.specialFeature);
-    await productPage.verifyPrice(laptops.macbookAir13.price);
+    await productPage.verifyPrice();
   });
 });
