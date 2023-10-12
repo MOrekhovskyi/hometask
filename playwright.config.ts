@@ -5,7 +5,7 @@ import { resolve } from 'path';
 dotenvConfig({ path: resolve(__dirname, '.env'), override: true });
 
 export default defineConfig({
-  testDir: './Amazon',
+  testDir: './Amazon/e2e',
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
