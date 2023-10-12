@@ -10,7 +10,7 @@ Before you begin, make sure you have the following prerequisites:
 
 1. Node.js: Download and install Node.js, which you can find at [nodejs.org](https://nodejs.org/).
 
-2. Text Editor: Choose a text editor of your choice. We recommend Visual Studio Code, Sublime Text, or Brackets for a better development experience.
+2. IDE: Download and install Visual Code or IntelliJ IDEA
 
 ### Installation
 
