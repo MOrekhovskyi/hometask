@@ -11,6 +11,6 @@ export const laptops = {
     operationSystem: 'Mac OS',
     specialFeature: 'Backlit Keyboard',
     graphicsCard: 'Integrated',
-    price: '$894.00',
+    price: '$742.49',
   },
 };

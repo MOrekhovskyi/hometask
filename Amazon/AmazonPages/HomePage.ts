@@ -36,7 +36,7 @@ export default class HomePage {
   }
 
   async choseProduct(exactProductName: string) {
-    await this.productDescription.filter({ hasText: exactProductName }).click();
+    await this.productDescription.filter({ hasText: exactProductName }).first().click();
   }
 
   async resultListLenght() {
