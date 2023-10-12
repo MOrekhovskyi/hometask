@@ -1,83 +1,97 @@
 # Amazon Automated Testing with Playwright
 
-Welcome to the Amazon automated testing project using PlayWright. This REANDME will
-guide you throught
+Welcome to the Amazon automated testing project using Playwright. This README will guide you through the setup, test creation, and execution process.
 
-## Getting started
+## Getting Started
 
-### Pre-requisites
+### Prerequisites
 
-Before you begin, make sure you have the followoing pre-requisites
+Before you begin, make sure you have the following prerequisites:
 
-1. Node.js: Download and install Node.js 
-2. TextEditor: Download and install any Text Editor like Visual Code or Integrated Development Environment
+1. Node.js: Download and install Node.js, which you can find at [nodejs.org](https://nodejs.org/).
+
+2. Text Editor: Choose a text editor of your choice. We recommend Visual Studio Code, Sublime Text, or Brackets for a better development experience.
 
 ### Installation
 
-To set up project and dependencies, follow whese steps:
+To set up the project and its dependencies, follow these steps:
 
-1. Clone  this repository to your local machine using the following command
+1. Clone or Download the Repository:
+
+   - Clone the repository to your local machine using the following command:
+
 ```bash
 git clone https://github.com/MOrekhovskyi/hometask
 ```
-2. Navigate to project's directory, on terminal and run the following commands:
+ Alternatively, you can download the repository as a zip folder and extract it on your local machine.
+
+2.  Navigate to the Project Directory:
+
+   Open your terminal and navigate to the project's root directory.
+
+3.  Install Dependencies:
+
+   Run the following commands to install project dependencies and Playwright:
 
 ```bash
 npm install
 npx playwright install
 ```
 
-All the dependencies from package.json would be installed in node_modules folder.
+This will install all the required dependencies in the node_modules folder.
 
-### How to write Test
+## How to Write Tests
 
-To create automated tests for the Amazon project, follow these steps
+To create automated tests for the Amazon project, follow these steps:
 
-1. Add a new test specification
-    * Add new spec under `e2e` folder
-    * Name the file as <testname>.spec.ts (e.g. home.spec.ts)
-* Create folder under page-objects/pages as <name-page> (e.g. homePage)
+1. Add a New Test Specification:
 
-### How to Run Test
+   - Create a new test specification file under the 'e2e' folder.
+   - Name the file following the format: <testname>.spec.js (e.g., 'home.spec.js').
 
-You can execute your tests using PlayWright witj the followong commands:
+2. Create Page Objects:
 
-####  Run a Single Test:
+   - For each test, create a folder under the 'page-objects/pages' directory. Name it as <page-name> (e.g., 'homePage').
 
-To run a specific test file, use he following command (replace `<fileName>` with your test file name):
+   This organization helps maintain clean and structured test files.
+
+## How to Run Tests
+
+You can execute your tests using Playwright with the following commands:
+
+- Run a Single Test by Path:
+
+   To run a specific test file, use the following command (replace <fileName> with your test file name):
 ```bash
 npx playwright test <fileName>.spec.ts 
 ```
 
-#### Run All Tests: 
+- Run All Tests:
 
-To run all tests, simply use:
+   To run all tests on all available browsers, simply use:
 
 ```bash
 npx playwright test 
 ```
 
-### How to use Linter
+## How to Use Linter
 
-To maintain code quality and formatting, we recommend using EALint. Here`s how to utilize it:
+To maintain code quality and formatting, we recommend using ESLint. Here's how to utilize it:
 
-#### Run ESLint for a Single File:
+- Run ESLint for a Single File:
 
-To apply ESLint formatting for a single file use terminal command
-(replace `<fileName>` and `<product>` with your test file name and derictory):
+   To apply ESLint formatting to a single file, execute the following terminal command (replace <product> and <fileName> with your specific values):
 
 ```bash
     npx eslint --fix Amazon/e2e/<product>/<fileName>.ts
 ```
 
-#### Run ESLint for a Directory:
+- Run ESLint for a Directory:
 
-To apply ESLint formatting for an entire directory and format all files in a given directory use command
-(replace `<product>` with your test derictory):
+   To run ESLint for an entire directory and format all files within it, use the following command (replace <product> with the appropriate directory):
 
 ```bash
     npx eslint --fix Amazon/e2e/<product>/.
 ```
 
-These instructions should help you get started with automated testing for your amazon-related project using PlayWright. 
-If you encounter any issues or have questions, please refer to the documentation or reach out me for support.
+These instructions should help you get started with automated testing for your Amazon-related project using Playwright. If you encounter any issues or have questions, please refer to the documentation or reach out to me for support.
